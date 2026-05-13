@@ -4,9 +4,10 @@ import { Menu, X, ShoppingCart, Phone } from "lucide-react";
 const NAV_LINKS = [
   { label: "Overview", href: "#overview" },
   { label: "Why Us", href: "#why-us" },
-  { label: "Baby Flour", href: "#baby-flour" },
+  { label: "Baby Uji", href: "#baby-uji" },
   { label: "Adult Uji", href: "#adult-uji" },
-  { label: "Cereals", href: "#cereals" },
+  { label: "Cereals & Legumes", href: "#cereals-legumes" },
+  { label: "Other Commodities", href: "#other-commodities" },
   { label: "Milling", href: "#milling" },
   { label: "Delivery", href: "#delivery" },
   { label: "Reviews", href: "#reviews" },
@@ -37,19 +38,19 @@ export default function Navbar({ cartCount, onCartOpen }: NavbarProps) {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
-          <a href="#hero" className="flex items-center gap-2.5 group">
+          <a href="#hero" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground text-sm font-bold">
               U
             </div>
             <span className="font-bold text-lg text-foreground">Unga Sawa Mix</span>
           </a>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-0.5">
             {NAV_LINKS.map(link => (
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50"
+                className="px-2.5 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted/50"
               >
                 {link.label}
               </a>
@@ -60,7 +61,6 @@ export default function Navbar({ cartCount, onCartOpen }: NavbarProps) {
             <a
               href="tel:+254721339862"
               className="hidden md:flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-              data-testid="link-call-nav"
             >
               <Phone size={15} />
               0721 339 862
@@ -81,9 +81,8 @@ export default function Navbar({ cartCount, onCartOpen }: NavbarProps) {
             </button>
 
             <button
-              className="lg:hidden p-2 rounded-md text-foreground hover:bg-muted/50 transition-colors"
+              className="xl:hidden p-2 rounded-md text-foreground hover:bg-muted/50 transition-colors"
               onClick={() => setMobileOpen(v => !v)}
-              data-testid="button-mobile-menu"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
@@ -93,7 +92,7 @@ export default function Navbar({ cartCount, onCartOpen }: NavbarProps) {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-white/98 backdrop-blur-md border-t border-border/60 shadow-lg">
+        <div className="xl:hidden bg-white/98 backdrop-blur-md border-t border-border/60 shadow-lg">
           <nav className="container mx-auto px-4 py-3 flex flex-col gap-1">
             {NAV_LINKS.map(link => (
               <a

@@ -1,4 +1,4 @@
-export type Category = "Baby Flour" | "Adult Uji" | "Cereals" | "Milling";
+export type Category = "Baby Uji" | "Adult Uji" | "Cereals & Legumes" | "Other Commodities" | "Milling";
 
 export interface Product {
   id: string;
@@ -16,7 +16,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "baby-uji",
     name: "Baby Uji Flour",
-    category: "Baby Flour",
+    category: "Baby Uji",
     priceNum: 200,
     priceLabel: "KSh 200",
     unit: "kg",
@@ -36,7 +36,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "kamande",
     name: "Kamande",
-    category: "Adult Uji",
+    category: "Cereals & Legumes",
     priceNum: null,
     priceLabel: "Contact for price consultation",
     unit: "portion",
@@ -46,7 +46,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "njahi",
     name: "Njahi",
-    category: "Adult Uji",
+    category: "Cereals & Legumes",
     priceNum: null,
     priceLabel: "Contact for price consultation",
     unit: "portion",
@@ -56,7 +56,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "ndengu",
     name: "Ndengu (nylon)",
-    category: "Adult Uji",
+    category: "Cereals & Legumes",
     priceNum: null,
     priceLabel: "Contact for price consultation",
     unit: "portion",
@@ -66,7 +66,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "special-ndengu",
     name: "Special Ndengu",
-    category: "Adult Uji",
+    category: "Cereals & Legumes",
     priceNum: null,
     priceLabel: "Contact for price consultation",
     unit: "portion",
@@ -76,7 +76,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "army-beans",
     name: "Army Beans",
-    category: "Adult Uji",
+    category: "Cereals & Legumes",
     priceNum: null,
     priceLabel: "Contact for price consultation",
     unit: "portion",
@@ -86,7 +86,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "pishori",
     name: "Pure Pishori Rice",
-    category: "Cereals",
+    category: "Cereals & Legumes",
     priceNum: null,
     priceLabel: "KSh 160–180",
     unit: "kg",
@@ -96,7 +96,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "kwamboka",
     name: "Kwamboka Rice",
-    category: "Cereals",
+    category: "Cereals & Legumes",
     priceNum: null,
     priceLabel: "Contact for price",
     unit: "kg",
@@ -105,7 +105,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "honey",
     name: "Honey",
-    category: "Cereals",
+    category: "Other Commodities",
     priceNum: null,
     priceLabel: "Depends on size",
     unit: "jar",
@@ -114,7 +114,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "eggs",
     name: "Kienyeji Eggs",
-    category: "Cereals",
+    category: "Other Commodities",
     priceNum: null,
     priceLabel: "Contact for price",
     unit: "tray",
@@ -149,8 +149,10 @@ export const PRODUCTS: Product[] = [
   },
 ];
 
+export const BABY_UJI = PRODUCTS.filter(p => p.category === "Baby Uji");
+export const ADULT_UJI = PRODUCTS.filter(p => p.category === "Adult Uji");
 export const LEGUMES = PRODUCTS.filter(p => p.isLegume);
-export const BABY_FLOUR = PRODUCTS.filter(p => p.category === "Baby Flour");
-export const ADULT_UJI_NON_LEGUME = PRODUCTS.filter(p => p.category === "Adult Uji" && !p.isLegume);
-export const CEREALS = PRODUCTS.filter(p => p.category === "Cereals");
+export const CEREALS_RICE = PRODUCTS.filter(p => p.category === "Cereals & Legumes" && !p.isLegume);
+export const CEREALS_AND_LEGUMES = PRODUCTS.filter(p => p.category === "Cereals & Legumes");
+export const OTHER_COMMODITIES = PRODUCTS.filter(p => p.category === "Other Commodities");
 export const MILLING = PRODUCTS.filter(p => p.category === "Milling");
