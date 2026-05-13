@@ -319,9 +319,19 @@ export default function Home({ onAddToCart }: HomeProps) {
           <div className="mb-12">
             <span className="text-xs font-semibold text-primary uppercase tracking-widest">Category</span>
             <h2 className="text-4xl font-serif font-bold text-foreground mt-1 mb-3">Baby Flour</h2>
-            <p className="text-muted-foreground max-w-xl">
+            <p className="text-muted-foreground max-w-xl mb-5">
               Specially crafted for infants and toddlers from 6 months and above. Packed with the essential nutrients growing children need — no additives, no shortcuts.
             </p>
+            <div className="flex flex-wrap gap-2">
+              {["Sorghum", "Amaranth", "Sweet Potatoes", "Pumpkins", "Green Banana", "Yellow Maize"].map(ing => (
+                <span
+                  key={ing}
+                  className="text-xs bg-primary/10 text-primary px-3 py-1.5 rounded-full font-medium"
+                >
+                  {ing}
+                </span>
+              ))}
+            </div>
           </div>
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <img
