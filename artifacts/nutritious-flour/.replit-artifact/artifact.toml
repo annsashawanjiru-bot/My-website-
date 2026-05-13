@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Nutritious Flour & Foods"
+version = "1.0.0"
+id = "artifacts/nutritious-flour"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20384
+
+[services.development]
+run = "pnpm --filter @workspace/nutritious-flour run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/nutritious-flour", "run", "build" ]
+publicDir = "artifacts/nutritious-flour/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20384"
+BASE_PATH = "/"
