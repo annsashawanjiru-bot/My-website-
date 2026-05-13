@@ -1,42 +1,70 @@
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
-
-import { Layout } from "@/components/layout";
-import Home from "@/pages/home";
-import Products from "@/pages/products";
-import Location from "@/pages/location";
-import Contact from "@/pages/contact";
+import Navbar from "@/components/Navbar";
+import Cart, { type CartItem } from "@/components/Cart";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
+import Home from "@/pages/Home";
+import type { Product } from "@/data/products";
 
 const queryClient = new QueryClient();
 
-function Router() {
+function AppContent() {
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const addToCart = (product: Product) => {
+    setCartItems(prev => {
+      const existing = prev.find(i => i.product.id === product.id);
+      if (existing) {
+        return prev.map(i =>
+          i.product.id === product.id ? { ...i, quantity: i.quantity + 1 } : i
+        );
+      }
+      return [...prev, { product, quantity: 1 }];
+    });
+    setCartOpen(true);
+  };
+
+  const incQty = (id: string) =>
+    setCartItems(prev =>
+      prev.map(i => (i.product.id === id ? { ...i, quantity: i.quantity + 1 } : i))
+    );
+
+  const decQty = (id: string) =>
+    setCartItems(prev =>
+      prev
+        .map(i => (i.product.id === id ? { ...i, quantity: i.quantity - 1 } : i))
+        .filter(i => i.quantity > 0)
+    );
+
+  const removeItem = (id: string) =>
+    setCartItems(prev => prev.filter(i => i.product.id !== id));
+
+  const cartCount = cartItems.reduce((sum, i) => sum + i.quantity, 0);
+
   return (
-    <Layout>
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/products" component={Products} />
-        <Route path="/location" component={Location} />
-        <Route path="/contact" component={Contact} />
-        <Route component={NotFound} />
-      </Switch>
-    </Layout>
+    <>
+      <Navbar cartCount={cartCount} onCartOpen={() => setCartOpen(true)} />
+      <Home onAddToCart={addToCart} cartItems={cartItems} />
+      <Cart
+        open={cartOpen}
+        onClose={() => setCartOpen(false)}
+        items={cartItems}
+        onInc={incQty}
+        onDec={decQty}
+        onRemove={removeItem}
+      />
+      <WhatsAppFloat />
+      <Toaster />
+    </>
   );
 }
 
-function App() {
+export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-          <Router />
-        </WouterRouter>
-        <Toaster />
-      </TooltipProvider>
+      <AppContent />
     </QueryClientProvider>
   );
 }
-
-export default App;

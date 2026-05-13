@@ -1,0 +1,216 @@
+export type Category = "Baby Flour" | "Adult Uji" | "Cereals" | "Milling";
+
+export interface Product {
+  id: string;
+  name: string;
+  category: Category;
+  priceNum: number | null;
+  priceLabel: string;
+  unit: string;
+  description: string;
+  badge?: string;
+  isLegume?: boolean;
+}
+
+export const PRODUCTS: Product[] = [
+  {
+    id: "baby-uji",
+    name: "Baby Uji Flour",
+    category: "Baby Flour",
+    priceNum: 200,
+    priceLabel: "KSh 200",
+    unit: "kg",
+    description: "For children from 6 months+. Blended with sorghum, moringa, pumpkin & green bananas.",
+    badge: "Best for babies",
+  },
+  {
+    id: "adult-uji",
+    name: "Adult Uji Unga",
+    category: "Adult Uji",
+    priceNum: 200,
+    priceLabel: "KSh 200",
+    unit: "kg",
+    description: "Nutritious homemade uji flour. Packed with vitamins, minerals, and natural goodness.",
+    badge: "Popular",
+  },
+  {
+    id: "kamande",
+    name: "Kamande",
+    category: "Adult Uji",
+    priceNum: null,
+    priceLabel: "Contact for price consultation",
+    unit: "portion",
+    description: "Quality kamande, freshly sourced and carefully sorted for your family.",
+    isLegume: true,
+  },
+  {
+    id: "njahi",
+    name: "Njahi",
+    category: "Adult Uji",
+    priceNum: null,
+    priceLabel: "Contact for price consultation",
+    unit: "portion",
+    description: "Fresh njahi beans — a nutritious Kenyan staple, rich in protein and fibre.",
+    isLegume: true,
+  },
+  {
+    id: "ndengu",
+    name: "Ndengu (nylon)",
+    category: "Adult Uji",
+    priceNum: null,
+    priceLabel: "Contact for price consultation",
+    unit: "portion",
+    description: "Clean, quality ndengu. Perfect for a quick and healthy family meal.",
+    isLegume: true,
+  },
+  {
+    id: "special-ndengu",
+    name: "Special Ndengu",
+    category: "Adult Uji",
+    priceNum: null,
+    priceLabel: "Contact for price consultation",
+    unit: "portion",
+    description: "Premium special ndengu — carefully selected for superior quality.",
+    isLegume: true,
+  },
+  {
+    id: "army-beans",
+    name: "Army Beans",
+    category: "Adult Uji",
+    priceNum: null,
+    priceLabel: "Contact for price consultation",
+    unit: "portion",
+    description: "Quality army beans. Availability confirmed on WhatsApp.",
+    isLegume: true,
+  },
+  {
+    id: "sorghum",
+    name: "Sorghum",
+    category: "Adult Uji",
+    priceNum: null,
+    priceLabel: "Contact for price consultation",
+    unit: "portion",
+    description: "Wholesome sorghum grain, a nutritious staple for healthy meals.",
+    isLegume: true,
+  },
+  {
+    id: "amaranth",
+    name: "Amaranth",
+    category: "Adult Uji",
+    priceNum: null,
+    priceLabel: "Contact for price consultation",
+    unit: "portion",
+    description: "Nutritious amaranth grain, rich in protein and essential minerals.",
+    isLegume: true,
+  },
+  {
+    id: "sweet-potatoes",
+    name: "Sweet Potatoes",
+    category: "Adult Uji",
+    priceNum: null,
+    priceLabel: "Contact for price consultation",
+    unit: "portion",
+    description: "Fresh, naturally sweet potatoes — a wholesome family favourite.",
+    isLegume: true,
+  },
+  {
+    id: "pumpkins",
+    name: "Pumpkins",
+    category: "Adult Uji",
+    priceNum: null,
+    priceLabel: "Contact for price consultation",
+    unit: "portion",
+    description: "Ripe, nutrient-rich pumpkins sourced fresh from local farms.",
+    isLegume: true,
+  },
+  {
+    id: "green-banana",
+    name: "Green Banana",
+    category: "Adult Uji",
+    priceNum: null,
+    priceLabel: "Contact for price consultation",
+    unit: "portion",
+    description: "Fresh green bananas — great for cooking and nutritious uji blends.",
+    isLegume: true,
+  },
+  {
+    id: "yellow-maize",
+    name: "Yellow Maize",
+    category: "Adult Uji",
+    priceNum: null,
+    priceLabel: "Contact for price consultation",
+    unit: "portion",
+    description: "Quality yellow maize, perfect for milling into fresh unga.",
+    isLegume: true,
+  },
+  {
+    id: "pishori",
+    name: "Pure Pishori Rice",
+    category: "Cereals",
+    priceNum: null,
+    priceLabel: "KSh 160–180",
+    unit: "kg",
+    description: "The finest Pishori rice from Mwea — aromatic, clean, and premium quality.",
+    badge: "Premium",
+  },
+  {
+    id: "kwamboka",
+    name: "Kwamboka Rice",
+    category: "Cereals",
+    priceNum: null,
+    priceLabel: "Contact for price",
+    unit: "kg",
+    description: "Quality Kwamboka rice. Ask us for current price and availability.",
+  },
+  {
+    id: "honey",
+    name: "Honey",
+    category: "Cereals",
+    priceNum: null,
+    priceLabel: "Depends on size",
+    unit: "jar",
+    description: "Pure natural honey. Price depends on jar size — ask us for options.",
+  },
+  {
+    id: "eggs",
+    name: "Kienyeji Eggs",
+    category: "Cereals",
+    priceNum: null,
+    priceLabel: "Contact for price",
+    unit: "tray",
+    description: "Fresh free-range kienyeji eggs. Contact us for current price.",
+  },
+  {
+    id: "maize-milling",
+    name: "Maize Milling",
+    category: "Milling",
+    priceNum: null,
+    priceLabel: "Contact for price",
+    unit: "service",
+    description: "Bring your maize — we mill it fresh into fine unga. Clean equipment, fast service.",
+  },
+  {
+    id: "rice-dehusking",
+    name: "Rice Dehusking",
+    category: "Milling",
+    priceNum: null,
+    priceLabel: "Contact for price",
+    unit: "service",
+    description: "Clean and efficient rice dehusking. Grain quality preserved throughout.",
+  },
+  {
+    id: "uji-blending",
+    name: "Custom Uji Blending",
+    category: "Milling",
+    priceNum: null,
+    priceLabel: "Contact for price",
+    unit: "service",
+    description: "We blend uji to your specification — sorghum, millet, moringa and more.",
+  },
+];
+
+export const LEGUMES = PRODUCTS.filter(p => p.isLegume);
+export const BABY_FLOUR = PRODUCTS.filter(p => p.category === "Baby Flour");
+export const ADULT_UJI_NON_LEGUME = PRODUCTS.filter(p => p.category === "Adult Uji" && !p.isLegume);
+export const CEREALS = PRODUCTS.filter(p => p.category === "Cereals");
+export const MILLING = PRODUCTS.filter(p => p.category === "Milling");
