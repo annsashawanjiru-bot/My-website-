@@ -16,12 +16,12 @@ interface HomeProps {
 }
 
 const REVIEWS = [
-  { name: "Mary Wanjiku", initials: "MW", location: "Mwea", rating: 5, text: "Nimekuwa nikiamini Unga Sawa Mix kwa miaka miwili sasa. Uji wao ni mzuri sana na watoto wangu wanafurahi kunywa kila asubuhi. Asante sana!" },
-  { name: "Peter Kamau", initials: "PK", location: "Kirinyaga", rating: 5, text: "The Pishori rice from here is the best in the area. Fresh, clean, and fairly priced. I always come back whenever I need quality cereals for my family." },
-  { name: "Grace Njeri", initials: "GN", location: "Mwea", rating: 5, text: "Nilinunua uji wa mtoto wangu hapa na matokeo yamekuwa mazuri sana. Mtoto wangu wa miezi 8 anakula vizuri ana nguvu. Bidhaa ni safi na ya asili." },
-  { name: "James Mwangi", initials: "JM", location: "Kerugoya", rating: 5, text: "Very honest business. Prices are fair and the quality never disappoints. I get my honey and kamande from here every month. Highly recommend to anyone in Mwea." },
-  { name: "Esther Auma", initials: "EA", location: "Mwea", rating: 5, text: "Unga Sawa Mix ndio duka bora kwa uji wa kienyeji. Ninashukuru sana kwa huduma nzuri na bei nzuri. Familia yangu yote inapenda sana." },
-  { name: "Samuel Otieno", initials: "SO", location: "Mwea Town", rating: 5, text: "Got my njahi and ndengu here last week. Very clean and well sorted. The lady at the shop was also very helpful and explained the nutritional benefits. Will definitely return." },
+  { name: "Mary Wanjiku", initials: "MW", location: "Nairobi", rating: 5, text: "I order my baby uji from Unga Sawa Mix every month and they deliver all the way to Nairobi. The quality is always consistent and my daughter loves it. Best decision I ever made for her nutrition!" },
+  { name: "Peter Kamau", initials: "PK", location: "Nakuru", rating: 5, text: "I was sceptical about ordering flour online but these guys delivered to Nakuru without any issue. The uji flour arrived well-sealed and fresh. My whole family has switched and we are not going back." },
+  { name: "Grace Njeri", initials: "GN", location: "Mombasa", rating: 5, text: "Nilinunua uji wa mtoto wangu na walinitumia mpaka Mombasa! Mtoto wangu wa miezi 8 anakula vizuri ana nguvu sana. Bidhaa ni safi, ya asili, na delivery ilikuwa haraka sana." },
+  { name: "James Mwangi", initials: "JM", location: "Eldoret", rating: 5, text: "Ordered kamande and adult uji flour to Eldoret and I was amazed — the packaging was tight, nothing spilled, and it arrived in perfect condition. Prices are fair and the service is very personal." },
+  { name: "Esther Auma", initials: "EA", location: "Kisumu", rating: 5, text: "Unga Sawa Mix wanatuletea hadi Kisumu! Ninashukuru sana kwa huduma nzuri na delivery ya haraka. Familia yangu yote inapenda uji wao — ni wa asili na tofauti kabisa na wengine." },
+  { name: "Samuel Otieno", initials: "SO", location: "Thika", rating: 5, text: "I have been ordering rice and legumes from Unga Sawa Mix for months now, delivered to Thika. Always on time, always fresh, always honest pricing. This is the kind of business Kenya needs more of." },
 ];
 
 const WHY_US_REASONS = [

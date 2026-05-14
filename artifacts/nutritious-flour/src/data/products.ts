@@ -20,7 +20,7 @@ export const PRODUCTS: Product[] = [
     priceNum: 200,
     priceLabel: "KSh 200",
     unit: "kg",
-    description: "For children from 6 months+. Blended with sorghum, moringa, pumpkin & green bananas.",
+    description: "For children from 6 months+. Blended with sorghum, pumpkin, green bananas & other wholesome grains.",
     badge: "Best for babies",
   },
   {
