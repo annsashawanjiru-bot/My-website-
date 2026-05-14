@@ -16,12 +16,48 @@ interface HomeProps {
 }
 
 const REVIEWS = [
-  { name: "Mary Wanjiku", initials: "MW", location: "Nairobi", rating: 5, text: "I order my baby uji from Unga Sawa Mix every month and they deliver all the way to Nairobi. The quality is always consistent and my daughter loves it. Best decision I ever made for her nutrition!" },
-  { name: "Peter Kamau", initials: "PK", location: "Nakuru", rating: 5, text: "I was sceptical about ordering flour online but these guys delivered to Nakuru without any issue. The uji flour arrived well-sealed and fresh. My whole family has switched and we are not going back." },
-  { name: "Grace Njeri", initials: "GN", location: "Mombasa", rating: 5, text: "Nilinunua uji wa mtoto wangu na walinitumia mpaka Mombasa! Mtoto wangu wa miezi 8 anakula vizuri ana nguvu sana. Bidhaa ni safi, ya asili, na delivery ilikuwa haraka sana." },
-  { name: "James Mwangi", initials: "JM", location: "Eldoret", rating: 5, text: "Ordered kamande and adult uji flour to Eldoret and I was amazed — the packaging was tight, nothing spilled, and it arrived in perfect condition. Prices are fair and the service is very personal." },
-  { name: "Esther Auma", initials: "EA", location: "Kisumu", rating: 5, text: "Unga Sawa Mix wanatuletea hadi Kisumu! Ninashukuru sana kwa huduma nzuri na delivery ya haraka. Familia yangu yote inapenda uji wao — ni wa asili na tofauti kabisa na wengine." },
-  { name: "Samuel Otieno", initials: "SO", location: "Thika", rating: 5, text: "I have been ordering rice and legumes from Unga Sawa Mix for months now, delivered to Thika. Always on time, always fresh, always honest pricing. This is the kind of business Kenya needs more of." },
+  {
+    name: "Faith Muthoni",
+    initials: "FM",
+    location: "Nairobi, Westlands",
+    rating: 5,
+    text: "I ordered the baby uji flour and it was delivered to Nairobi beautifully sealed — the packaging was so tight and neat, I was impressed before I even opened it. My 8-month-old has been on it for two months now and the change is visible. She is more active, eating better, and her weight is on track. This flour is the real deal.",
+  },
+  {
+    name: "Kevin Odhiambo",
+    initials: "KO",
+    location: "Kisumu, Kondele",
+    rating: 5,
+    text: "I ordered Pishori rice and njahi beans all the way to Kisumu. The package arrived well sealed with no spillage whatsoever — everything was neatly packed. The Pishori rice is genuinely aromatic and clean, and the njahi is perfectly sorted with no stones or dirt. My family has refused any other rice since we started buying from here.",
+  },
+  {
+    name: "Amina Hassan",
+    initials: "AH",
+    location: "Mombasa, Nyali",
+    rating: 5,
+    text: "The adult uji flour was delivered to Mombasa and it came so well packaged — sealed tight, no mess at all. I have been drinking it every morning and I honestly feel stronger. My doctor even commented on my improved energy levels. I also got the honey and it is the purest I have tasted. Will be ordering every month.",
+  },
+  {
+    name: "Brian Kipchoge",
+    initials: "BK",
+    location: "Eldoret, Langas",
+    rating: 5,
+    text: "Ordered kamande, special ndengu, and army beans to Eldoret. Each item arrived in its own secure packaging — beautifully sealed, nothing mixed up. The legumes are clean and well sorted, which saves so much time. The kamande in particular is of a quality I have not found in any Eldoret market. Highly recommend ordering countrywide.",
+  },
+  {
+    name: "Consolata Wanjiru",
+    initials: "CW",
+    location: "Nakuru, Section 58",
+    rating: 5,
+    text: "I ordered the baby uji and Kwamboka rice delivered to Nakuru. The parcel was so nicely packed — sealed properly, everything intact. My baby has been on the uji flour since she was 6 months and she is now 10 months, healthy, chubby, and full of energy. The rice cooks beautifully too. This shop deserves every star.",
+  },
+  {
+    name: "Diana Chebet",
+    initials: "DC",
+    location: "Thika, Makongeni",
+    rating: 5,
+    text: "I ordered the kienyeji eggs and natural honey to Thika alongside some ndengu. Everything arrived well sealed and carefully packed — the eggs were not broken, the honey jar was secure, and the ndengu was in perfect condition. The honey is rich and pure, nothing like the supermarket versions. This business is honest and the delivery is reliable.",
+  },
 ];
 
 const WHY_US_REASONS = [
